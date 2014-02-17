@@ -1,0 +1,16 @@
+Build Instruction:
+	01) Open Quartus
+	02) Click "Open Existing Project"
+	03) Navigate to "/home/user/projects/mityarm-5csx-dev-board/hw/fpga/mityarm_5csx_dev_board"
+	04) Open "mityarm_5csx_dev_board.qpf"
+	05) Open Qsys: Tools->Qsys
+	06) Close the Initialization dialog when it finishes
+	07) Open "mityarm_5csx_dev_board.qsys"
+	08) Click the "Generation" tab
+	09) Change the "Create HDL design files for sythesis" to "VHDL"
+	10) Click "Generate"
+	11) Close the Generation dialog when it finishes
+	12) Go back to Quartus
+	13) Start the compilation: Processing->Start Compilation
+	14) A popup dialog will appear when the compilation is done
+	15) The compiled FPGA image (mityarm_5csx_dev_board.sof) will be in /home/user/projects/mityarm-5csx-dev-board/hw/fpga/mityarm_5csx_dev_board/output_files
