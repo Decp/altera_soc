@@ -1,0 +1,1 @@
+cmd_/data/rfrazer/work/projects/soc_irq_amp/linux_stuff/my_IRQ_module/built-in.o :=  rm -f /data/rfrazer/work/projects/soc_irq_amp/linux_stuff/my_IRQ_module/built-in.o; arm-linux-gnueabihf-ar rcsD /data/rfrazer/work/projects/soc_irq_amp/linux_stuff/my_IRQ_module/built-in.o

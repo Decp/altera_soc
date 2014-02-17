@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filters version="13.1.1">
+ <filter name="axi and avalon">
+  <rule what="INTERFACE_TYPE" how="IS" value="avalon" set="any" />
+  <rule what="INTERFACE_TYPE" how="IS" value="axi" set="any" />
+ </filter>
+</filters>

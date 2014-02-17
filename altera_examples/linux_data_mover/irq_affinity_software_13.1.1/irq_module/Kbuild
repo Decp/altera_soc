@@ -1,0 +1,4 @@
+obj-m  := irq_module.o
+ccflags-y :=-I${QSYS_HEADERS}
+ccflags-y +=-I${SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include
+

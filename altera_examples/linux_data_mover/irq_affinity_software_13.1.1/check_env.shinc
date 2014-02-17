@@ -1,0 +1,101 @@
+#
+# This function attempts to verify that the setup_env.sh script has already been
+# executed and if so, it exits.  If the script does not detect a previous
+# execution then it simply returns and allows the script to continue.
+#
+function CHECK_SETUP_ENV_SH_WAS_RUN() {
+	[ "1" -eq "${SETUP_ENV_SH_WAS_RUN:-"0"}" ] && {
+		cat << EOF >&2
+ERROR:
+ERROR: The environment variable SETUP_ENV_SH_WAS_RUN appears to exist.  Please
+ERROR: exit the shell and re-run this script.  This script does not overwrite
+ERROR: the variables that it sets up so it must be run from a clean environment.
+ERROR:
+EOF
+		exit 1
+	}
+}
+
+#
+# This function performs some simple sanity checks on the SOCEDS_DEST_ROOT
+# environment variable.  It ensures that it has been defined and then attempts
+# to verify that a few expected resources exist within the path.  If the checks
+# fail, then the script exits.
+#
+function CHECK_SOCEDS_DEST_ROOT() {
+	TEST_PARAMETER=${SOCEDS_DEST_ROOT:?please run SoC EDS embedded_command_shell.sh before running this script}
+
+	[ -d "${TEST_PARAMETER}" ] || {
+		cat << EOF >&2
+ERROR:
+ERROR: The environment variable SOCEDS_DEST_ROOT does not point to an existing
+ERROR: directory.  Please confirm that the SoC EDS envrionment is properly
+ERROR: configured.
+ERROR: 
+ERROR: Have you run the SoC EDS embedded_command_shell.sh script?
+ERROR:
+EOF
+		exit 1
+	}
+
+	[ -f "${TEST_PARAMETER}/ds-5/bin/arm-linux-gnueabihf-gcc" ] && \
+	[ -d "${TEST_PARAMETER}/ip/altera/hps/altera_hps/hwlib" ] || {
+		cat << EOF >&2
+ERROR:
+ERROR: The environment variable SOCEDS_DEST_ROOT does not point into a valid
+ERROR: directory.  Some of the expected resources from the SoC EDS do not
+ERROR: appear to be present.  Please confirm that the SoC EDS environment is
+ERROR: properly configured.
+ERROR:
+ERROR: Have you run the SoC EDS embedded_command_shell.sh script?
+ERROR:
+EOF
+		exit 1
+	}
+}
+
+#
+# This function performs some simple sanity checks on the LINUX_SOCFPGA_SRC_TREE_PATH
+# environment variable.  It ensures that it has been defined and then attempts
+# to verify that a few expected resources exist within the path.  If the checks
+# fail, then the script exits.
+#
+function CHECK_LINUX_SOCFPGA_SRC_TREE_PATH() {
+	TEST_PARAMETER=${LINUX_SOCFPGA_SRC_TREE_PATH:?please configure LINUX_SOCFPGA_SRC_TREE_PATH before running this script}
+
+	[ -d "${TEST_PARAMETER}/arch/arm/include/generated" ] && \
+	[ -d "${TEST_PARAMETER}/include/generated" ] || {
+		cat << EOF >&2
+ERROR:
+ERROR: The environment variable LINUX_SOCFPGA_SRC_TREE_PATH does not point into
+ERROR: a valid linux source directory.  Some of the expected resources from 
+ERROR: a linux source directory do not appear to be present.  To be clear, this
+ERROR: is expected to be the output build directory for the kernel that you run
+ERROR: on your SoC target hardware, which may be different from the original
+ERROR: kernel source directory.
+ERROR:
+EOF
+		exit 1
+	}
+}
+
+#
+# This function performs some simple sanity checks on the QSYS_HEADERS
+# environment variable.  It ensures that it has been defined and then attempts
+# to verify that the directory exists.  If the checks fail, then the script
+# exits.
+#
+function CHECK_QSYS_HEADERS() {
+	TEST_PARAMETER=${QSYS_HEADERS:?please configure QSYS_HEADERS before running this script}
+
+	[ -d "${TEST_PARAMETER}" ] || {
+		cat << EOF >&2
+ERROR:
+ERROR: The environment variable QSYS_HEADERS does not point to an existing
+ERROR: directory.
+ERROR:
+EOF
+		exit 1
+	}
+}
+

@@ -1,0 +1,225 @@
+#
+# This function echoes the input argument list out stdout following a prefix
+# string of "WARNING: "
+#
+function PWARN() {
+	echo "WARNING: $@"
+}
+
+#
+# This function passes lines from stdin to the PWARN function.
+#
+function PWARN_STDIN() {
+	while read NEXTLINE
+	do
+		PWARN "${NEXTLINE}"
+	done
+}
+
+#
+# This function echoes the input argument list out stdout following a prefix
+# string of "INFO: "
+#
+function PINFO() {
+	echo "INFO: $@"
+}
+
+#
+# This function passes lines from stdin to the PINFO function.
+#
+function PINFO_STDIN() {
+	while read NEXTLINE
+	do
+		PINFO "${NEXTLINE}"
+	done
+}
+
+#
+# This function echoes the input argument list out stdout following a prefix
+# string of "ERROR: "
+#
+function PERROR() {
+	echo "ERROR: $@" 1>&2
+}
+
+#
+# This function passes lines from stdin to the PERROR function.
+#
+function PERROR_STDIN() {
+	while read NEXTLINE
+	do
+		PERROR "${NEXTLINE}"
+	done
+}
+
+#
+# This function checks that the command argument passed into it actually
+# exists in the PATH environment and can be executed.  If the command is not
+# found, the function calls exit.
+#
+function CMD_MUST_EXIST() {
+	CMD="$1"
+	type -P "${CMD}" > /dev/null 2>&1 || {
+		PERROR ""
+		PERROR "cannot locate command:"
+		PERROR "\"$CMD\""
+		PERROR "Cannot continue."
+		PERROR ""
+		exit 1
+	}
+}
+
+#
+# This function takes a command line input, it verifys that the command is
+# valid, creates a unique log file to use while the command is executed, then
+# it executes the command, pushing stdout and stderr into the log file.  If
+# the command exits with an error, then this function calls exit.
+#
+function RUN_CMD() {
+	CMD="$1"
+	shift 1
+	CMD_MUST_EXIST "${CMD}"
+	PINFO "Running command: \"$CMD\""
+	LOG_FILE_NAME="${BUILD_LOG_DIR}/${TIME_STAMP}_${CMD_SEQUENCE}_$(basename ${CMD}).log"
+	PINFO "Log file: \"${LOG_FILE_NAME}\""
+	"${CMD}" "$@" > "${LOG_FILE_NAME}" 2>&1 && {
+		PINFO "Command completed successfully.  See log file for details."
+	} || {
+		PERROR "Command failed.  See log file for details."
+		PERROR "Cannot continue."
+		PERROR ""
+		exit 1
+	}
+	((CMD_SEQUENCE++))
+}
+
+#
+# This function checks that the file argument passed into it actually exists.
+# If it does not exist then this function calls exit.
+#
+function FILE_MUST_EXIST() {
+	[ -f "$1" ] || {
+		PERROR ""
+		PERROR "Cannot locate required file:"
+		PERROR "\"$1\""
+		PERROR "Cannot continue."
+		PERROR ""
+		exit 1
+	}
+}
+
+#
+# This function checks that the directory argument passed into it DOES NOT
+# exist.  If it does exist then this function calls exit.
+#
+function DIR_MUST_NOT_EXIST() {
+	[ -d "$1" ] && {
+		PERROR ""
+		PERROR "Output directory already exists:"
+		PERROR "\"$1\""
+		PERROR "Cannot continue."
+		PERROR ""
+		exit 1
+	}
+}
+
+#
+# This function checks that the current Quartus version matches the expected
+# version argument that is passed in.  If it does not match then this
+# function calls exit.
+#
+function VALIDATE_QUARTUS_VERSION() {
+	CMD_MUST_EXIST quartus_sh
+	quartus_sh --version | grep "$1" > /dev/null 2>&1 || {
+		PERROR ""
+		PERROR "This script was tested with Quartus:"
+		PERROR ""
+		PERROR "$1"
+		PERROR "Found this Quartus instead:"
+		PERROR ""
+		quartus_sh --version 2>&1 | PERROR_STDIN
+		PERROR ""
+		PERROR "Cannot continue."
+		PERROR ""
+		exit 1
+	}
+}
+
+#
+# This function checks to see if the input directory argument passed in
+# already exisits.  If it does, then the function returns, otherwise the
+# function attempts to create the directory.  The the directory creation
+# fails then this function calls exit.
+#
+function MAKE_DIRECTORY() {
+	[ -d "$1" ] || {
+		mkdir "$1" > /dev/null 2>&1 || {
+			PERROR ""
+			PERROR "while creating directory:"
+			PERROR "\"$1\""
+			PERROR "Cannot continue."
+			PERROR ""
+			exit 1
+		}
+	}
+}
+
+#
+# This function attempts to pushd into the directory argument passed in.  If
+# pushd fails then this function calls exit.
+#
+function PUSH_DIRECTORY() {
+	pushd "$1" > /dev/null 2>&1 || {
+		PERROR ""
+		PERROR "while changing to directory:"
+		PERROR "\"$1\""
+		PERROR "Cannot continue."
+		PERROR ""
+		exit 1
+	}
+}
+
+#
+# This function attempts to popd from the directory stack.  If popd fails then
+# this function calls exit.
+#
+function POP_DIRECTORY() {
+	popd > /dev/null 2>&1 || {
+		PERROR ""
+		PERROR "while poping directory:"
+		PERROR "Cannot continue."
+		PERROR ""
+		exit 1
+	}
+}
+
+#
+# This function greps the input file argument passed in checking for the
+# string "Critical Warning", and if located the function prints warning
+# statments to that effect.
+#
+function CHECK_FOR_CRITICAL_WARNINGS() {
+	grep -i "Critical Warning" "$1" > /dev/null 2>&1 && {
+		PWARN ""
+		PWARN "Critical Warnings reported in file:"
+		PWARN "$1"
+		PWARN "Run this command to extract warnings:"
+		PWARN "\"grep \"Critical Warning\" $1\""
+	}
+}
+
+# other scripts can test this parameter to see if it has already been included
+BUILD_FUNCS_INC=1
+
+# create a timestamp for this execution time to be used in log file names
+TIME_STAMP="$(date +%Y%m%d_%H%M%S)"
+
+# create a sequence value that can be used in log file names
+CMD_SEQUENCE=1
+
+# if there is not currently a build log directory specified, do so now
+BUILD_LOG_DIR="${BUILD_LOG_DIR:-"build_logs"}"
+
+# make the build log directory
+MAKE_DIRECTORY "./${BUILD_LOG_DIR}"
+

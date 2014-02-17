@@ -1,0 +1,2 @@
+obj-m  := amp_sim_module.o
+
