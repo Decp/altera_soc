@@ -1,0 +1,320 @@
+Info: Starting: Create testbench Qsys system
+Info: C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial.ipx
+Info: ip-generate --project-directory=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/ --output-directory=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/ --report-file=sopcinfo:C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial.sopcinfo --report-file=html:C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial.html --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=Unknown --system-info=DEVICE_SPEEDGRADE=Unknown --component-file=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial.qsys
+Progress: Loading qsys/st_bfm_qsys_tutorial.qsys
+Progress: Reading input file
+Progress: Adding dut [altera_avalon_sc_fifo 13.1]
+Progress: Parameterizing module dut
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Loading component library for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (1) searching D:/altera/13.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index D:\altera\13.1\quartus\sopc_builder\bin\root_components.ipx
+Info: D:\altera\13.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
+Info: Reading index D:\altera\13.1\quartus\sopc_builder\bin\ip_component_categories.ipx
+Info: D:\altera\13.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
+Info: D:/altera/13.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
+Info: Reading index D:\altera\13.1\ip\altera\altera_components.ipx
+Info: D:\altera\13.1\ip\altera\altera_components.ipx described 870 plugins, 0 paths, in 0.12 seconds
+Info: D:/altera/13.1/ip/**/* matched 97 files in 0.12 seconds
+Info: C:/home/.altera.quartus/ip/13.1/**/* matched 0 files in 0.00 seconds
+Info: C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index C:\home\workspace_sigasi\axi_bfm\ug_avalon_verification\qsys\st_bfm_qsys_tutorial\testbench\st_bfm_qsys_tutorial.ipx
+Progress: Loading qsys/st_bfm_qsys_tutorial.qsys
+Info: C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/* matched 13 files in 0.00 seconds
+Info: C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/ip/**/* matched 0 files in 0.00 seconds
+Info: C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/*/* matched 12 files in 0.00 seconds
+Info: C:\home\workspace_sigasi\axi_bfm\ug_avalon_verification\qsys\st_bfm_qsys_tutorial\testbench\st_bfm_qsys_tutorial.ipx described 0 plugins, 3 paths, in 0.01 seconds
+Info: C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/* matched 1 files in 0.01 seconds
+Info: C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/*/* matched 0 files in 0.00 seconds
+Info: Reading index D:\altera\13.1\quartus\sopc_builder\builtin.ipx
+Info: D:\altera\13.1\quartus\sopc_builder\builtin.ipx described 97 plugins, 0 paths, in 0.01 seconds
+Info: D:/altera/13.1/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
+Info: Reading index D:\altera\13.1\quartus\common\librarian\factories\index.ipx
+Info: D:\altera\13.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.02 seconds
+Info: D:/altera/13.1/quartus/common/librarian/factories/**/* matched 4 files in 0.02 seconds
+Info: D:/altera/13.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: D:\altera\13.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 9 paths, in 0.17 seconds
+Info: D:/altera/13.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.17 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Loading presets
+Progress: Loading presets
+Info: Running script D:/altera/13.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: acds::register_package_version 12.1
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: st_bfm_qsys_tutorial
+Info: TB_Gen: System design is: st_bfm_qsys_tutorial
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property dut CLASS_NAME
+Info: get_instance_assignment dut testbench.partner.map.clk
+Info: get_interface_property reset EXPORT_OF
+Info: get_instance_property dut CLASS_NAME
+Info: get_instance_assignment dut testbench.partner.map.clk_reset
+Info: get_interface_property st_in EXPORT_OF
+Info: get_instance_property dut CLASS_NAME
+Info: get_instance_assignment dut testbench.partner.map.in
+Info: get_interface_property st_out EXPORT_OF
+Info: get_instance_property dut CLASS_NAME
+Info: get_instance_assignment dut testbench.partner.map.out
+Info: send_message Info TB_Gen: Creating testbench system : st_bfm_qsys_tutorial_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : st_bfm_qsys_tutorial_tb with all standard BFMs
+Info: create_system st_bfm_qsys_tutorial_tb
+Info: add_instance st_bfm_qsys_tutorial_inst st_bfm_qsys_tutorial 
+Info: set_use_testbench_naming_pattern true
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst clk CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst st_in CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst st_out CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst clk CLASS_NAME
+Info: add_instance st_bfm_qsys_tutorial_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property st_bfm_qsys_tutorial_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst clk clockRate
+Info: send_message Warning TB_Gen: clockRate is less than 1Hz; setting to 50MHz
+Warning: TB_Gen: clockRate is less than 1Hz; setting to 50MHz
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_clk_bfm CLOCK_RATE 50000000
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property st_bfm_qsys_tutorial_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst clk CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_clk_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_clk_bfm clk CLASS_NAME
+Info: add_connection st_bfm_qsys_tutorial_inst_clk_bfm.clk st_bfm_qsys_tutorial_inst.clk
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst reset CLASS_NAME
+Info: send_message Info TB_Gen: reset_sink found: reset
+Info: TB_Gen: reset_sink found: reset
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst reset CLASS_NAME
+Info: add_instance st_bfm_qsys_tutorial_inst_reset_bfm altera_avalon_reset_source 
+Info: get_instance_property st_bfm_qsys_tutorial_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_ports st_bfm_qsys_tutorial_inst reset
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst reset reset_reset ROLE
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_reset_bfm ASSERT_HIGH_RESET 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_reset_bfm INITIAL_RESET_CYCLES 50
+Info: get_instance_property st_bfm_qsys_tutorial_inst_reset_bfm CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_reset_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_property st_bfm_qsys_tutorial_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst reset associatedClock
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst clk CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_clk_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_clk_bfm clk CLASS_NAME
+Info: add_connection st_bfm_qsys_tutorial_inst_clk_bfm.clk st_bfm_qsys_tutorial_inst_reset_bfm.clk
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst reset CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_reset_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_reset_bfm clk CLASS_NAME
+Info: add_connection st_bfm_qsys_tutorial_inst_reset_bfm.reset st_bfm_qsys_tutorial_inst.reset
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst st_in CLASS_NAME
+Info: send_message Info TB_Gen: avalon_streaming_sink found: st_in
+Info: TB_Gen: avalon_streaming_sink found: st_in
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst st_in CLASS_NAME
+Info: add_instance st_bfm_qsys_tutorial_inst_st_in_bfm altera_avalon_st_source_bfm 
+Info: get_instance_property st_bfm_qsys_tutorial_inst_st_in_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_in dataBitsPerSymbol
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_in beatsPerCycle
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_in symbolsPerBeat
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_in maxChannel
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_in readyLatency
+Info: get_instance_interface_ports st_bfm_qsys_tutorial_inst st_in
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_data ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_data WIDTH
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_valid ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_ready ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_startofpacket ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_endofpacket ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_empty ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_empty WIDTH
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_error ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_error WIDTH
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_channel ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_in st_in_channel WIDTH
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm ST_NUMSYMBOLS 4
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm ST_SYMBOL_W 8
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm ST_MAX_CHANNELS 7
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm ST_BEATSPERCYCLE 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm ST_READY_LATENCY 0
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm ST_CHANNEL_W 3
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm ST_EMPTY_W 2
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm ST_ERROR_W 3
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm USE_PACKET 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm USE_CHANNEL 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm USE_ERROR 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm USE_READY 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm USE_VALID 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm USE_EMPTY 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_in_bfm VHDL_ID 0
+Info: get_instance_property st_bfm_qsys_tutorial_inst_st_in_bfm CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_st_in_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_in_bfm clk CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_in_bfm clk_reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_in_bfm src CLASS_NAME
+Info: get_instance_property st_bfm_qsys_tutorial_inst_st_in_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_in associatedClock
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst clk CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_clk_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_clk_bfm clk CLASS_NAME
+Info: add_connection st_bfm_qsys_tutorial_inst_clk_bfm.clk st_bfm_qsys_tutorial_inst_st_in_bfm.clk
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_st_in_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_in_bfm clk CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_in_bfm clk_reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_in_bfm src CLASS_NAME
+Info: get_instance_property st_bfm_qsys_tutorial_inst_st_in_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_in associatedReset
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst reset CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_reset_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_reset_bfm clk CLASS_NAME
+Info: add_connection st_bfm_qsys_tutorial_inst_reset_bfm.reset st_bfm_qsys_tutorial_inst_st_in_bfm.clk_reset
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst st_in CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_st_in_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_in_bfm clk CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_in_bfm clk_reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_in_bfm src CLASS_NAME
+Info: add_connection st_bfm_qsys_tutorial_inst_st_in_bfm.src st_bfm_qsys_tutorial_inst.st_in
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst st_out CLASS_NAME
+Info: send_message Info TB_Gen: avalon_streaming_source found: st_out
+Info: TB_Gen: avalon_streaming_source found: st_out
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst st_out CLASS_NAME
+Info: add_instance st_bfm_qsys_tutorial_inst_st_out_bfm altera_avalon_st_sink_bfm 
+Info: get_instance_property st_bfm_qsys_tutorial_inst_st_out_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_out dataBitsPerSymbol
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_out beatsPerCycle
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_out symbolsPerBeat
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_out maxChannel
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_out readyLatency
+Info: get_instance_interface_ports st_bfm_qsys_tutorial_inst st_out
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_data ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_data WIDTH
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_valid ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_ready ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_startofpacket ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_endofpacket ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_empty ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_empty WIDTH
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_error ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_error WIDTH
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_channel ROLE
+Info: get_instance_interface_port_property st_bfm_qsys_tutorial_inst st_out st_out_channel WIDTH
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm ST_NUMSYMBOLS 4
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm ST_SYMBOL_W 8
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm ST_MAX_CHANNELS 7
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm ST_BEATSPERCYCLE 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm ST_READY_LATENCY 0
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm ST_CHANNEL_W 3
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm ST_EMPTY_W 2
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm ST_ERROR_W 3
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm USE_PACKET 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm USE_CHANNEL 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm USE_ERROR 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm USE_READY 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm USE_VALID 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm USE_EMPTY 1
+Info: set_instance_parameter_value st_bfm_qsys_tutorial_inst_st_out_bfm VHDL_ID 0
+Info: get_instance_property st_bfm_qsys_tutorial_inst_st_out_bfm CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_st_out_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_out_bfm clk CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_out_bfm clk_reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_out_bfm sink CLASS_NAME
+Info: get_instance_property st_bfm_qsys_tutorial_inst_st_out_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_out associatedClock
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst clk CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_clk_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_clk_bfm clk CLASS_NAME
+Info: add_connection st_bfm_qsys_tutorial_inst_clk_bfm.clk st_bfm_qsys_tutorial_inst_st_out_bfm.clk
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_st_out_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_out_bfm clk CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_out_bfm clk_reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_out_bfm sink CLASS_NAME
+Info: get_instance_property st_bfm_qsys_tutorial_inst_st_out_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value st_bfm_qsys_tutorial_inst st_out associatedReset
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst reset CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_reset_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_reset_bfm clk CLASS_NAME
+Info: add_connection st_bfm_qsys_tutorial_inst_reset_bfm.reset st_bfm_qsys_tutorial_inst_st_out_bfm.clk_reset
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst st_out CLASS_NAME
+Info: get_instance_interfaces st_bfm_qsys_tutorial_inst_st_out_bfm
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_out_bfm clk CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_out_bfm clk_reset CLASS_NAME
+Info: get_instance_interface_property st_bfm_qsys_tutorial_inst_st_out_bfm sink CLASS_NAME
+Info: add_connection st_bfm_qsys_tutorial_inst.st_out st_bfm_qsys_tutorial_inst_st_out_bfm.sink
+Info: send_message Info TB_Gen: Saving testbench system: st_bfm_qsys_tutorial_tb.qsys
+Info: TB_Gen: Saving testbench system: st_bfm_qsys_tutorial_tb.qsys
+Info: save_system st_bfm_qsys_tutorial_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb.qsys
+Info: Done
+Info: ip-generate --project-directory=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/ --output-directory=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/ --file-set=SIM_VERILOG --report-file=html:C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb.html --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=Unknown --system-info=DEVICE_SPEEDGRADE=Unknown --component-file=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb.qsys --report-file=csv:C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial_tb.csv --report-file=spd:C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial_tb.spd
+Progress: Loading testbench/st_bfm_qsys_tutorial_tb.qsys
+Progress: Reading input file
+Progress: Adding st_bfm_qsys_tutorial_inst [st_bfm_qsys_tutorial 1.0]
+Progress: Parameterizing module st_bfm_qsys_tutorial_inst
+Progress: Adding st_bfm_qsys_tutorial_inst_clk_bfm [altera_avalon_clock_source 13.1]
+Progress: Parameterizing module st_bfm_qsys_tutorial_inst_clk_bfm
+Progress: Adding st_bfm_qsys_tutorial_inst_reset_bfm [altera_avalon_reset_source 13.1]
+Progress: Parameterizing module st_bfm_qsys_tutorial_inst_reset_bfm
+Progress: Adding st_bfm_qsys_tutorial_inst_st_in_bfm [altera_avalon_st_source_bfm 13.1]
+Progress: Parameterizing module st_bfm_qsys_tutorial_inst_st_in_bfm
+Progress: Adding st_bfm_qsys_tutorial_inst_st_out_bfm [altera_avalon_st_sink_bfm 13.1]
+Progress: Parameterizing module st_bfm_qsys_tutorial_inst_st_out_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: st_bfm_qsys_tutorial_tb.st_bfm_qsys_tutorial_inst_clk_bfm: Elaborate: altera_clock_source
+Info: st_bfm_qsys_tutorial_tb.st_bfm_qsys_tutorial_inst_clk_bfm:            $Revision: #1 $
+Info: st_bfm_qsys_tutorial_tb.st_bfm_qsys_tutorial_inst_clk_bfm:            $Date: 2013/08/11 $
+Info: st_bfm_qsys_tutorial_tb.st_bfm_qsys_tutorial_inst_reset_bfm: Elaborate: altera_reset_source
+Info: st_bfm_qsys_tutorial_tb.st_bfm_qsys_tutorial_inst_reset_bfm:            $Revision: #1 $
+Info: st_bfm_qsys_tutorial_tb.st_bfm_qsys_tutorial_inst_reset_bfm:            $Date: 2013/08/11 $
+Info: st_bfm_qsys_tutorial_tb.st_bfm_qsys_tutorial_inst_reset_bfm: Reset is positively asserted.
+Info: st_bfm_qsys_tutorial_tb: Generating st_bfm_qsys_tutorial_tb "st_bfm_qsys_tutorial_tb" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 5 modules, 9 connections
+Info: No custom instruction connections, skipping transform 
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: st_bfm_qsys_tutorial_inst: "st_bfm_qsys_tutorial_tb" instantiated st_bfm_qsys_tutorial "st_bfm_qsys_tutorial_inst"
+Info: st_bfm_qsys_tutorial_inst_clk_bfm: "st_bfm_qsys_tutorial_tb" instantiated altera_avalon_clock_source "st_bfm_qsys_tutorial_inst_clk_bfm"
+Info: st_bfm_qsys_tutorial_inst_reset_bfm: "st_bfm_qsys_tutorial_tb" instantiated altera_avalon_reset_source "st_bfm_qsys_tutorial_inst_reset_bfm"
+Info: Reusing file C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/verbosity_pkg.sv
+Info: st_bfm_qsys_tutorial_inst_st_in_bfm: "st_bfm_qsys_tutorial_tb" instantiated altera_avalon_st_source_bfm "st_bfm_qsys_tutorial_inst_st_in_bfm"
+Info: Reusing file C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/verbosity_pkg.sv
+Info: st_bfm_qsys_tutorial_inst_st_out_bfm: "st_bfm_qsys_tutorial_tb" instantiated altera_avalon_st_sink_bfm "st_bfm_qsys_tutorial_inst_st_out_bfm"
+Info: Reusing file C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/avalon_utilities_pkg.sv
+Info: dut: "st_bfm_qsys_tutorial_inst" instantiated altera_avalon_sc_fifo "dut"
+Info: st_bfm_qsys_tutorial_tb: Done "st_bfm_qsys_tutorial_tb" with 7 modules, 9 files, 118131 bytes
+Info: ip-generate succeeded.
+Info: sim-script-gen --spd=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial_tb.spd --output-directory=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/
+Info: Doing: ip-make-simscript --spd=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial_tb.spd --output-directory=C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/
+Info: Generating the following file(s) for MODELSIM simulator in C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	7 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/home/workspace_sigasi/axi_bfm/ug_avalon_verification/qsys/st_bfm_qsys_tutorial/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create testbench Qsys system

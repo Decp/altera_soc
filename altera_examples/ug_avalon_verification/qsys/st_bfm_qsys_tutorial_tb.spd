@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/verbosity_pkg.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_common_sv_packages"
+   systemVerilogPackageName="avalon_vip_verbosity_pkg" />
+ <file
+   path="st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/avalon_utilities_pkg.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_common_sv_packages"
+   systemVerilogPackageName="avalon_vip_avalon_utilities_pkg" />
+ <file
+   path="st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/altera_avalon_sc_fifo.v"
+   type="VERILOG"
+   library="dut" />
+ <file
+   path="st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/altera_avalon_st_sink_bfm.sv"
+   type="SYSTEM_VERILOG"
+   library="st_bfm_qsys_tutorial_inst_st_out_bfm" />
+ <file
+   path="st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/altera_avalon_st_source_bfm.sv"
+   type="SYSTEM_VERILOG"
+   library="st_bfm_qsys_tutorial_inst_st_in_bfm" />
+ <file
+   path="st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/altera_avalon_reset_source.sv"
+   type="SYSTEM_VERILOG"
+   library="st_bfm_qsys_tutorial_inst_reset_bfm" />
+ <file
+   path="st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/altera_avalon_clock_source.sv"
+   type="SYSTEM_VERILOG"
+   library="st_bfm_qsys_tutorial_inst_clk_bfm" />
+ <file
+   path="st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/submodules/st_bfm_qsys_tutorial.v"
+   type="VERILOG"
+   library="st_bfm_qsys_tutorial_inst" />
+ <file
+   path="st_bfm_qsys_tutorial/testbench/st_bfm_qsys_tutorial_tb/simulation/st_bfm_qsys_tutorial_tb.v"
+   type="VERILOG" />
+ <topLevel name="st_bfm_qsys_tutorial_tb" />
+ <deviceFamily name="cyclonev" />
+</simPackage>
