@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="qsys_vip/simulation/submodules/verbosity_pkg.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_common_sv_packages"
+   systemVerilogPackageName="avalon_vip_verbosity_pkg" />
+ <file
+   path="qsys_vip/simulation/submodules/avalon_mm_pkg.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_common_sv_packages"
+   systemVerilogPackageName="avalon_vip_avalon_mm_pkg" />
+ <file
+   path="qsys_vip/simulation/submodules/avalon_utilities_pkg.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_common_sv_packages"
+   systemVerilogPackageName="avalon_vip_avalon_utilities_pkg" />
+ <file
+   path="qsys_vip/simulation/submodules/altera_merlin_slave_translator.sv"
+   type="SYSTEM_VERILOG"
+   library="slave_bfm_s0_translator" />
+ <file
+   path="qsys_vip/simulation/submodules/altera_merlin_master_translator.sv"
+   type="SYSTEM_VERILOG"
+   library="master_bfm_m0_translator" />
+ <file
+   path="qsys_vip/simulation/submodules/altera_reset_controller.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="qsys_vip/simulation/submodules/altera_reset_synchronizer.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="qsys_vip/simulation/submodules/altera_reset_controller.sdc"
+   type="SDC"
+   library="rst_controller" />
+ <file
+   path="qsys_vip/simulation/submodules/qsys_vip_mm_interconnect_0.v"
+   type="VERILOG"
+   library="mm_interconnect_0" />
+ <file
+   path="qsys_vip/simulation/submodules/altera_avalon_mm_slave_bfm.sv"
+   type="SYSTEM_VERILOG"
+   library="slave_bfm" />
+ <file
+   path="qsys_vip/simulation/submodules/altera_avalon_mm_master_bfm.sv"
+   type="SYSTEM_VERILOG"
+   library="master_bfm" />
+ <file path="qsys_vip/simulation/qsys_vip.v" type="VERILOG" />
+ <topLevel name="qsys_vip" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

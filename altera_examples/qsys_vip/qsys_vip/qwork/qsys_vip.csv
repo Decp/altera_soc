@@ -1,0 +1,36 @@
+# system info qsys_vip on 2014.02.19.09:56:09
+system_info:
+name,value
+DEVICE,5CSEBA2U19C7
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1392821767
+#
+#
+# Files generated for qsys_vip on 2014.02.19.09:56:09
+files:
+filepath,kind,attributes,module,is_top
+qsys_vip/simulation/qsys_vip.v,VERILOG,,qsys_vip,true
+qsys_vip/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_avalon_mm_master_bfm,false
+qsys_vip/simulation/submodules/avalon_mm_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_avalon_mm_pkg,altera_avalon_mm_master_bfm,false
+qsys_vip/simulation/submodules/avalon_utilities_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_avalon_utilities_pkg,altera_avalon_mm_master_bfm,false
+qsys_vip/simulation/submodules/altera_avalon_mm_master_bfm.sv,SYSTEM_VERILOG,,altera_avalon_mm_master_bfm,false
+qsys_vip/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_avalon_mm_slave_bfm,false
+qsys_vip/simulation/submodules/avalon_mm_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_avalon_mm_pkg,altera_avalon_mm_slave_bfm,false
+qsys_vip/simulation/submodules/avalon_utilities_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_avalon_utilities_pkg,altera_avalon_mm_slave_bfm,false
+qsys_vip/simulation/submodules/altera_avalon_mm_slave_bfm.sv,SYSTEM_VERILOG,,altera_avalon_mm_slave_bfm,false
+qsys_vip/simulation/submodules/qsys_vip_mm_interconnect_0.v,VERILOG,,qsys_vip_mm_interconnect_0,false
+qsys_vip/simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+qsys_vip/simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+qsys_vip/simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+qsys_vip/simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
+qsys_vip/simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+qsys_vip.master_bfm,altera_avalon_mm_master_bfm
+qsys_vip.slave_bfm,altera_avalon_mm_slave_bfm
+qsys_vip.mm_interconnect_0,qsys_vip_mm_interconnect_0
+qsys_vip.mm_interconnect_0.master_bfm_m0_translator,altera_merlin_master_translator
+qsys_vip.mm_interconnect_0.slave_bfm_s0_translator,altera_merlin_slave_translator
+qsys_vip.rst_controller,altera_reset_controller
